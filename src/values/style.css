@@ -43,3 +43,8 @@
     -fx-background-color: #BAEAC3;
     -fx-background-radius: 30;
 }
+
+.fruit-item{
+    -fx-background-color: #FFF;
+    -fx-background-radius: 30;
+}
