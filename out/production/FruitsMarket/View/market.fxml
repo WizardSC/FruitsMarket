@@ -19,12 +19,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MarketController">
    <children>
       <BorderPane layoutY="6.0" prefHeight="650.0" prefWidth="1100.0" stylesheets="@../values/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox prefHeight="610.0" prefWidth="430.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+            <VBox fx:id="chosenFruitCard" prefHeight="610.0" prefWidth="430.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="74.0" prefWidth="430.0">
                      <children>
@@ -69,7 +68,7 @@
                      <children>
                         <HBox prefHeight="58.0" prefWidth="346.0">
                            <children>
-                              <Label prefHeight="58.0" prefWidth="162.0" text="Peach" textFill="WHITE">
+                              <Label fx:id="fruitNameLabel" prefHeight="58.0" prefWidth="162.0" text="Peach" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="28.0" />
                                  </font>
@@ -77,7 +76,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </Label>
-                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="128.0" text="\$2.99" textFill="WHITE">
+                              <Label fx:id="fruitPriceLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="128.0" text="\$2.99" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="28.0" />
                                  </font>
@@ -90,7 +89,7 @@
                               <Insets left="15.0" right="15.0" top="30.0" />
                            </VBox.margin>
                         </HBox>
-                        <ImageView fitHeight="160.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="fruitImage" fitHeight="160.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/peach.png" />
                            </image>
@@ -147,7 +146,7 @@
             </VBox>
          </left>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="58.0" prefWidth="670.0">
                      <children>
@@ -231,11 +230,11 @@
                         <Insets left="20.0" right="20.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="shadow" stylesheets="@../values/style.css" VBox.vgrow="ALWAYS">
                      <children>
-                        <ScrollPane prefHeight="508.0" prefWidth="708.0" styleClass="shadow" stylesheets="@../values/style.css">
+                        <ScrollPane fx:id="scroll" prefHeight="508.0" prefWidth="708.0" stylesheets="@../values/style.css">
                            <content>
-                              <GridPane prefHeight="0.0" prefWidth="0.0">
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 </columnConstraints>

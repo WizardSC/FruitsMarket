@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class FruitDTO {
     private String name;
-    private String imgSrc;
     private double price;
+    private String imgSrc;
     private String color;
 
-    public FruitDTO() {
-    }
+
+
 
     public String getName() {
         return name;
